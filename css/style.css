@@ -1,0 +1,106 @@
+/* general style */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Noto Sans', sans-serif;
+  height: 100vh;
+  background-color: rgba(0,0,0);
+}
+
+/* layout */
+.container{
+  width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.head img{
+  width: 300px;
+  margin-top: 20px;
+}
+
+/* typography */
+.title{
+  color: rgba(255,255,255, .7);
+  margin: 20px 0px;
+}
+
+
+h1{
+  font-family: 'Goldman', cursive;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.btn p{
+  color: rgba(255,255,255, .7);
+  margin-top: 40px;
+}
+/* bottoni */
+.btn ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.btn ul li{
+  margin: 10px;
+}
+
+.btn ul li button{
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+  padding: 10px;
+  width: 135px;
+  text-transform: uppercase;
+  background-color: #1c61a3;
+  font-weight: bold;
+  color: rgba(0,0,0, .8);
+}
+
+/* input */
+input{
+  text-align: center;
+  border-radius: 40px;
+  padding: 10px;
+  margin: 20px;
+}
+
+/* main */
+/* images */
+.heroes{
+  display: flex;
+  margin: 40px 0px;
+}
+
+main img{
+  width: 100%;
+}
+
+.closed-img{
+  flex-basis: calc(100% / 6 - 20px);
+  margin: 0 20px;
+  position: relative;
+}
+
+.closed-img .fa-times-circle{
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-50%);
+  color: white;
+  cursor: pointer;
+}
+
+/* footer */
+footer{
+  margin: 20px 0px;
+  color: rgba(255,255,255, .7); 
+}
