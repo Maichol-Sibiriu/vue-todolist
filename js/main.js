@@ -37,10 +37,14 @@ const todo = new Vue({
       "guardiani della galassia",
       "visione",
     ],
+    heroes: [],
   },
   methods:{
-    nextBtn(){
-      this.indexBtn += 1;
+    pushHero(){
+      if (this.indexBtn == this.indexImg) {
+        heroes.push(this.indexImg)
+      }
+
     }
   }
 });

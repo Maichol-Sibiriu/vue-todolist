@@ -30,27 +30,13 @@
           <div class="btn">
             <p>seleziona l'eroe dai bottoni....</p>
             <div class="btnHeroes">
-              <button v-for="(element) in btn"
+              <button v-for="(element,index) in btn"
+              @click="pushHero"
               type="button"
               name="button">
-              {{ btn[element] }}
+              {{ element }}
               </button>
             </div>
-              <!-- <li><button type="button" name="button">captan america</button></li>
-              <li><button type="button" name="button">ironman</button></li>
-              <li><button type="button" name="button">spiderman</button></li>
-              <li><button type="button" name="button">hulk</button></li>
-              <li><button type="button" name="button">hulk</button></li>
-              <li><button type="button" name="button">hulk</button></li>
-              <li><button type="button" name="button">hulk</button></li>
-              <li><button type="button" name="button">hulk</button></li>
-              <li><button type="button" name="button">hulk</button></li>
-              <li><button type="button" name="button">hulk</button></li>
-              <li><button type="button" name="button">hulk</button></li>
-              <li><button type="button" name="button">hulk</button></li>
-              <li><button type="button" name="button">hulk</button></li>
-              <li><button type="button" name="button">hulk</button></li> -->
-
 
             <!-- input -->
             <p> oppure scrivi il suo nome...</p>

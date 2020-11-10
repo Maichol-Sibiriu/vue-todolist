@@ -23,6 +23,9 @@ body{
   margin-top: 20px;
 }
 
+.active{
+  display: none;
+}
 /* typography */
 .title{
   color: rgba(255,255,255, .7);
