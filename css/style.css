@@ -52,12 +52,13 @@ h1{
   flex-wrap: wrap;
 }
 
-.btn button{
+.btn > button{
   padding: 10px;
   border-radius: 20px;
   color: white;
   background-color: green;
   border: none;
+  cursor: pointer;
 }
 
 .btn .btnHeroes button{
@@ -81,7 +82,6 @@ h1{
   color: white;
   cursor: pointer;
 }
-
 
 /* input */
 input{
