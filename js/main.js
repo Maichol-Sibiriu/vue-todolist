@@ -4,8 +4,6 @@ const todo = new Vue({
   el: '#todo',
   data: {
 
-    indexBtn: 0,
-
     btn: [
       "hulk",
       "captain america",
@@ -25,9 +23,6 @@ const todo = new Vue({
     removeHero(index){
       this.btn.splice(index,1);
     },
-    // removeClass(){
-    //
-    // }
   }
 });
 

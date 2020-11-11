@@ -22,14 +22,13 @@
 
           <!-- titolo -->
           <div class="title">
-            <h1></h1>
-            <h2>quanti personaggi marvel conosci??</h2>
+            <h1>quanti personaggi marvel conosci??</h1>
           </div>
 
           <!-- bottoni -->
           <div class="btn">
+
             <!-- input -->
-            <p> </p>
             <input type="text"
             v-model="heroes"
             placeholder="nome personaggio"
@@ -40,11 +39,11 @@
             @click="pushHero">
             aggiungi
             </button>
-<!-- :class="btn === '' ? : null" -->
-            <!-- <p>seleziona l'eroe dai bottoni....</p> -->
-            <h1 class="active">
-              nessun personaggio inserito
-            </h1>
+
+            <h2 v-if="btn.length === 0">
+              nessun personaggio inserito..
+            </h2>
+
             <div class="btnHeroes">
               <button v-for="(element,index) in btn"
               type="button"
@@ -55,13 +54,6 @@
               </i>
               </button>
             </div>
-
-            <!-- input -->
-            <!-- <p> oppure scrivi il suo nome...</p>
-            <input type="text"
-            name=""
-            placeholder="nome eroe"
-            @keyup.enter="addtodo"> -->
           </div>
 
         </div>
@@ -71,37 +63,11 @@
       <main class="container">
         <div class="heroes">
           <div class="closed-img">
-            <i class="far fa-times-circle"></i>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSW8cBhGx_3CxBLsuwdQA3miY1W89hdzGz9AA&usqp=CAU" alt="">
-          </div>
-          <div class="closed-img">
-            <i class="far fa-times-circle"></i>
-            <img src="https://www.gamelegends.it/wp-content/uploads/2020/05/Doctor-Strange.jpg" alt="">
-          </div>
-          <div class="closed-img">
-            <i class="far fa-times-circle"></i>
-            <img src="https://www.drcommodore.it/wp-content/uploads/2019/01/nick-fury-captain-america-the-winter-soldier-min-990x619.jpg" alt="">
-          </div>
-          <div class="closed-img">
-            <i class="far fa-times-circle"></i>
-            <img src="https://a-static.besthdwallpaper.com/ant-man-avengers-endgame-sfondo-2560x1600-25780_7.jpg" alt="">
-          </div>
-          <div class="closed-img">
-            <i class="far fa-times-circle"></i>
-            <img src="https://images.everyeye.it/img-articoli/black-panther-storia-eroe-comune-cinema-fumetti-v7-34370.jpg" alt="">
-          </div>
-          <div class="closed-img">
-            <i class="far fa-times-circle"></i>
-            <img src="https://images.everyeye.it/img-notizie/mcu-sebastian-stan-indossato-protesi-soldato-d-inverno-v3-340171.jpg" alt="">
           </div>
         </div>
       </main>
-
-      <!-- footer -->
-      <footer class="container">
-        i tuoi eroi sono "" e non vedono l'ora di
-        aiutarti a salvare la terra!!!
-      </footer>
+      
     </div>
 
     <!-- javascript -->
