@@ -11,6 +11,14 @@
   <body>
     <div id="todo">
 
+      <aside class="left">
+        <div class="heroes">
+          <div class="closed-img" v-for="element in img">
+            <img :src="element" alt="">
+          </div>
+        </div>
+      </aside>
+
       <!-- header -->
       <header class="container">
 
@@ -59,15 +67,14 @@
         </div>
       </header>
 
-      <!-- main -->
-      <main class="container">
+      <aside class="right">
         <div class="heroes">
-          <div class="closed-img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSW8cBhGx_3CxBLsuwdQA3miY1W89hdzGz9AA&usqp=CAU" alt="">
+          <div class="closed-img" v-for="element in img2">
+            <img :src="element" alt="">
           </div>
         </div>
-      </main>
-      
+      </aside>
+
     </div>
 
     <!-- javascript -->
