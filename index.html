@@ -22,25 +22,46 @@
 
           <!-- titolo -->
           <div class="title">
-            <h1>la terra e' in pericolo....</h1>
-            <h2>crea la tua squadra di sei eroi per salvarla!!!</h2>
+            <h1></h1>
+            <h2>quanti personaggi marvel conosci??</h2>
           </div>
 
           <!-- bottoni -->
           <div class="btn">
-            <p>seleziona l'eroe dai bottoni....</p>
+            <!-- input -->
+            <p> </p>
+            <input type="text"
+            v-model="heroes"
+            placeholder="nome personaggio"
+            @keyup.enter="pushHero">
+            <button
+            type="button"
+            name="button"
+            @click="pushHero">
+            aggiungi
+            </button>
+<!-- :class="btn === '' ? : null" -->
+            <!-- <p>seleziona l'eroe dai bottoni....</p> -->
+            <h1 class="active">
+              nessun personaggio inserito
+            </h1>
             <div class="btnHeroes">
               <button v-for="(element,index) in btn"
-              @click="pushHero"
               type="button"
               name="button">
               {{ element }}
+              <i class="far fa-times-circle"
+              @click="removeHero(index)">
+              </i>
               </button>
             </div>
 
             <!-- input -->
-            <p> oppure scrivi il suo nome...</p>
-            <input type="text" name="" placeholder="nome eroe">
+            <!-- <p> oppure scrivi il suo nome...</p>
+            <input type="text"
+            name=""
+            placeholder="nome eroe"
+            @keyup.enter="addtodo"> -->
           </div>
 
         </div>
