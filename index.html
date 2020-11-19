@@ -11,69 +11,65 @@
   <body>
     <div id="todo">
 
-      <aside class="left">
-        <div class="heroes">
-          <div class="closed-img" v-for="element in img">
-            <img :src="element" alt="">
-          </div>
-        </div>
-      </aside>
-
-      <!-- header -->
+       <!-- header -->
       <header class="container">
 
-        <!-- logo titolo bottoni e input -->
-        <div class="head">
+        <!-- title -->
+        <h1>agenda</h1>
 
-          <!-- logo -->
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Avengers_logo.png" alt="">
 
-          <!-- titolo -->
-          <div class="title">
-            <h1>quanti personaggi marvel conosci??</h1>
-          </div>
+        <!-- aggiungi todo -->
+        <div class="add d-f">
 
-          <!-- bottoni -->
-          <div class="btn">
+          <input
+              type="text"
+              v-model="heroes"
+              placeholder="cose da fare"
+              @keyup.enter="pushHero">
 
-            <!-- input -->
-            <input type="text"
-            v-model="heroes"
-            placeholder="nome personaggio"
-            @keyup.enter="pushHero">
-            <button
-            type="button"
-            name="button"
-            @click="pushHero">
+          <button
+                type="button"
+                name="button"
+                @click="pushHero">
             aggiungi
-            </button>
-
-            <h2 v-if="btn.length === 0">
-              nessun personaggio inserito..
-            </h2>
-
-            <div class="btnHeroes">
-              <button v-for="(element,index) in btn"
-              type="button"
-              name="button">
-              {{ element }}
-              <i class="far fa-times-circle"
-              @click="removeHero(index)">
-              </i>
-              </button>
-            </div>
-          </div>
+          </button>
 
         </div>
+
       </header>
 
-      <aside class="right">
-        <div class="heroes">
-          <div class="closed-img" v-for="element in img2">
-            <img :src="element" alt="">
+      <!-- main -->
+      <main class="container">
+
+        <!-- lista -->
+        <div class="list">
+
+          <div class="todo d-f"
+               v-for="(element,index) in btn"
+               @click="act(index)"
+               :class="index == indexTodo ? 'active' : null"
+               type="button"
+               name="button">
+
+              {{ element }}
+
+            <i class="far fa-times-circle"
+               @click="removeHero(index)">
+            </i>
+
           </div>
+
         </div>
-      </aside>
+
+      </main>
+
+      <!-- footer -->
+      <footer class="container">
+        <h2 v-if="btn.length === 0">
+          nessuna todo inserita..
+        </h2>
+      </footer>
+
 
     </div>
 
